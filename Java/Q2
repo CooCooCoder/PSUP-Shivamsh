@@ -1,0 +1,14 @@
+import java.util.Scanner;
+import java.util.InputMismatchException;
+class Problem2 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a character: ");
+        char character = input.next().charAt(0);
+
+        // A character is uppercase if its ASCII value is between 'A' and 'Z'.
+        if (character >= 'A' && character <= 'Z') {
+            System.out.println("The character is uppercase.");
+        }
+    }
+}

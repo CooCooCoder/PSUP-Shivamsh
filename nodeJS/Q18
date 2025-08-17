@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+#include <limits> 
+void daysInMonth() {
+    int month;
+    std::cout << "\n--- Days in a Month ---\n";
+    std::cout << "Enter a month number (1-12): ";
+    std::cin >> month;
+    switch (month) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            std::cout << "31 days\n";
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            std::cout << "30 days\n";
+            break;
+        case 2:
+            std::cout << "28 or 29 days\n";
+            break;
+        default:
+            std::cout << "Invalid month number.\n";
+    }
+}

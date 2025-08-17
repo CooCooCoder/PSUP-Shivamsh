@@ -1,0 +1,15 @@
+def classify_grade():
+    try:
+        mark = float(input("Enter the student's mark: "))
+        if 90 <= mark <= 100:
+            print("Grade: A")
+        elif 75 <= mark <= 89:
+            print("Grade: B")
+        elif 50 <= mark <= 74:
+            print("Grade: C")
+        elif 0 <= mark < 50:
+            print("Grade: Fail")
+        else:
+            print("Invalid mark. Please enter a number between 0 and 100.")
+    except ValueError:
+        print("Invalid input. Please enter a number.")

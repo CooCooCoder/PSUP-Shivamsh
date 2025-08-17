@@ -1,0 +1,11 @@
+def check_number_type():
+    try:
+        num = float(input("Enter a number to check its type: "))
+        if num > 0:
+            print(f"{num} is positive.")
+        elif num < 0:
+            print(f"{num} is negative.")
+        else:
+            print(f"{num} is zero.")
+    except ValueError:
+        print("Invalid input. Please enter a number.")

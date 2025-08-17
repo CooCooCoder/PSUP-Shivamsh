@@ -1,0 +1,9 @@
+def check_pass():
+    try:
+        mark = float(input("Enter the student's mark: "))
+        if mark >= 40:
+            print("The student has passed the exam.")
+        else:
+            print("The student has failed the exam.")
+    except ValueError:
+        print("Invalid input. Please enter a number.")

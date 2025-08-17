@@ -1,0 +1,7 @@
+def check_positive():
+    try:
+        num = float(input("Enter a number to check if it's positive: "))
+        if num > 0:
+            print(f"The number {num} is positive.")
+    except ValueError:
+        print("Invalid input. Please enter a number.")

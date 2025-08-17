@@ -1,0 +1,14 @@
+import java.util.Scanner;
+import java.util.InputMismatchException;
+class Problem4 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter an integer: ");
+        int number = input.nextInt();
+
+        // An even number is perfectly divisible by 2, meaning the remainder is 0.
+        if (number % 2 == 0) {
+            System.out.println("The number is even.");
+        }
+    }
+}

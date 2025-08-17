@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+#include <limits> 
+void clearInputBuffer() {
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+}
+void checkDivisibility() {
+    int num;
+    std::cout << "\n--- Check Divisibility by 3 and 5 ---\n";
+    std::cout << "Enter a number: ";
+    std::cin >> num;
+    if (num % 3 == 0 && num % 5 == 0) {
+        std::cout << "The number is divisible by both 3 and 5.\n";
+    } else {
+        std::cout << "The number is not divisible by both 3 and 5.\n";
+    }
+}

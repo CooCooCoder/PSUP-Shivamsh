@@ -1,0 +1,15 @@
+#include <iostream>
+#include <string>
+#include <limits> 
+void clearInputBuffer() {
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+}
+void checkPassword() {
+    std::string password;
+    std::cout << "\n--- Check Password ---\n";
+    std::cout << "Enter password: ";
+    std::cin >> password;
+    if (password == "admin123") {
+        std::cout << "Welcome\n";
+    }
+}

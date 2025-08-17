@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+#include <limits> 
+void clearInputBuffer() {
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+}
+void checkPass() {
+    int marks;
+    const int PASS_MARK = 40;
+    std::cout << "\n--- Check if a Student Passed ---\n";
+    std::cout << "Enter marks: ";
+    std::cin >> marks;
+    if (marks >= PASS_MARK) {
+        std::cout << "Student has passed the exam.\n";
+    }
+}

@@ -1,0 +1,11 @@
+def check_char_type():
+    char = input("Enter a single character: ")
+    if len(char) == 1:
+        if 'a' <= char.lower() <= 'z':
+            print("The character is an alphabet.")
+        elif '0' <= char <= '9':
+            print("The character is a digit.")
+        else:
+            print("The character is a special character.")
+    else:
+        print("Invalid input. Please enter a single character.")

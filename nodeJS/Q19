@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+#include <limits>
+void checkFuelType() {
+    int choice;
+    std::cout << "\n--- Choose a Fuel Type ---\n";
+    std::cout << "1: Petrol\n";
+    std::cout << "2: Diesel\n";
+    std::cout << "3: Electric\n";
+    std::cout << "Enter your choice: ";
+    std::cin >> choice;
+    switch (choice) {
+        case 1:
+            std::cout << "You chose Petrol.\n";
+            break;
+        case 2:
+            std::cout << "You chose Diesel.\n";
+            break;
+        case 3:
+            std::cout << "You chose Electric.\n";
+            break;
+        default:
+            std::cout << "Invalid choice.\n";
+    }
+}

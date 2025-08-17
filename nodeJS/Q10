@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+#include <limits> 
+void clearInputBuffer() {
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+}
+void checkLeapYear() {
+    int year;
+    std::cout << "\n--- Check Leap Year ---\n";
+    std::cout << "Enter a year: ";
+    std::cin >> year;
+    if ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))) {
+        std::cout << year << " is a leap year.\n";
+    } else {
+        std::cout << year << " is not a leap year.\n";
+    }
+}

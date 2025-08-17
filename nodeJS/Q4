@@ -1,0 +1,15 @@
+#include <iostream>
+#include <string>
+#include <limits> 
+void clearInputBuffer() {
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+}
+void checkEven() {
+    int num;
+    std::cout << "\n--- Check if a Number is Even ---\n";
+    std::cout << "Enter a number: ";
+    std::cin >> num;
+    if (num % 2 == 0) {
+        std::cout << "The number is even.\n";
+    }
+}

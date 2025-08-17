@@ -1,0 +1,14 @@
+import java.util.Scanner;
+import java.util.InputMismatchException;
+class Problem5 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the student's marks: ");
+        int marks = input.nextInt();
+        int passMark = 40;
+
+        if (marks >= passMark) {
+            System.out.println("The student has passed the exam.");
+        }
+    }
+}

@@ -1,0 +1,16 @@
+import java.util.Scanner;
+import java.util.InputMismatchException;
+class Problem3 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String correctPassword = "admin123";
+
+        System.out.print("Enter the password: ");
+        String enteredPassword = input.nextLine();
+
+        // Use the .equals() method to compare strings for equality.
+        if (enteredPassword.equals(correctPassword)) {
+            System.out.println("Welcome");
+        }
+    }
+}

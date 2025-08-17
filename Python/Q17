@@ -1,0 +1,21 @@
+def basic_arithmetic():
+    try:
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+        op = input("Enter an operator (+, -, *, /): ")
+
+        operations = {
+            '+': lambda a, b: a + b,
+            '-': lambda a, b: a - b,
+            '*': lambda a, b: a * b,
+            '/': lambda a, b: a / b
+        }
+        if op == '/' and num2 == 0:
+            print("Error: Cannot divide by zero.")
+        elif op in operations:
+            result = operations[op](num1, num2)
+            print(f"The result is: {result}")
+        else:
+            print("Invalid operator. Please enter one of +, -, *, /.")
+    except ValueError:
+        print("Invalid input. Please enter numbers.")

@@ -1,0 +1,6 @@
+def check_password():
+    password = input("Enter the password: ")
+    if password == "admin123":
+        print("Welcome")
+    else:
+        print("Incorrect password.")

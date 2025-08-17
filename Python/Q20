@@ -1,0 +1,15 @@
+def display_beverage_menu():
+    beverages = {
+        1: "Tea",
+        2: "Coffee",
+        3: "Juice"
+    }
+    print("Beverage Menu:")
+    print("1. Tea")
+    print("2. Coffee")
+    print("3. Juice")
+    try:
+        choice = int(input("Enter the number of your choice: "))
+        print(f"You selected: {beverages.get(choice, 'Invalid choice.')}")
+    except ValueError:
+        print("Invalid input. Please enter a number.")

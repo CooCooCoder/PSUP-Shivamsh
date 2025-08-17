@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+#include <limits> 
+void clearInputBuffer() {
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+}
+void checkPositiveNegative() {
+    int num;
+    std::cout << "\n--- Check Positive or Negative ---\n";
+    std::cout << "Enter a number: ";
+    std::cin >> num;
+    if (num >= 0) {
+        std::cout << "The number is positive.\n";
+    } else {
+        std::cout << "The number is negative.\n";
+    }
+}

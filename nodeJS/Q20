@@ -1,0 +1,92 @@
+#include <iostream>
+#include <string>
+#include <limits> 
+void beverageMenu() {
+    int choice;
+    std::cout << "\n--- Beverage Menu ---\n";
+    std::cout << "1: Tea\n";
+    std::cout << "2: Coffee\n";
+    std::cout << "3: Juice\n";
+    std::cout << "Enter your choice: ";
+    std::cin >> choice;
+    switch (choice) {
+        case 1:
+            std::cout << "You selected Tea.\n";
+            break;
+        case 2:
+            std::cout << "You selected Coffee.\n";
+            break;
+        case 3:
+            std::cout << "You selected Juice.\n";
+            break;
+        default:
+            std::cout << "Invalid choice.\n";
+    }
+}
+int main() {
+    int choice;
+    do {
+        std::cout << "\n----------------------------------------\n";
+        std::cout << "   C++ Programming Questions Menu\n";
+        std::cout << "----------------------------------------\n";
+        std::cout << "1. Check if a number is positive\n";
+        std::cout << "2. Check if a character is uppercase\n";
+        std::cout << "3. Check password\n";
+        std::cout << "4. Check if a number is even\n";
+        std::cout << "5. Check if a student passed\n";
+        std::cout << "6. Check positive or negative\n";
+        std::cout << "7. Check voting eligibility\n";
+        std::cout << "8. Compare two numbers\n";
+        std::cout << "9. Check vowel or consonant\n";
+        std::cout << "10. Check leap year\n";
+        std::cout << "11. Check positive, negative, or zero\n";
+        std::cout << "12. Classify grade\n";
+        std::cout << "13. Find smallest of three numbers\n";
+        std::cout << "14. Check divisibility by 3 and 5\n";
+        std::cout << "15. Check character type\n";
+        std::cout << "16. Display day of the week\n";
+        std::cout << "17. Basic arithmetic operations\n";
+        std::cout << "18. Days in a month\n";
+        std::cout << "19. Check fuel type\n";
+        std::cout << "20. Beverage menu\n";
+        std::cout << "0. Exit\n";
+        std::cout << "----------------------------------------\n";
+        std::cout << "Enter your choice: ";
+        std::cin >> choice;
+
+        if (std::cin.fail()) {
+            std::cout << "Invalid input. Please enter a number.\n";
+            std::cin.clear();
+            clearInputBuffer();
+            continue;
+        }
+
+        switch (choice) {
+            case 1: checkPositive(); break;
+            case 2: clearInputBuffer(); checkUppercase(); break;
+            case 3: clearInputBuffer(); checkPassword(); break;
+            case 4: checkEven(); break;
+            case 5: checkPass(); break;
+            case 6: checkPositiveNegative(); break;
+            case 7: checkVotingEligibility(); break;
+            case 8: compareNumbers(); break;
+            case 9: clearInputBuffer(); checkVowelConsonant(); break;
+            case 10: checkLeapYear(); break;
+            case 11: checkPositiveNegativeZero(); break;
+            case 12: classifyGrade(); break;
+            case 13: findSmallest(); break;
+            case 14: checkDivisibility(); break;
+            case 15: clearInputBuffer(); checkCharType(); break;
+            case 16: displayDayOfWeek(); break;
+            case 17: clearInputBuffer(); arithmeticOperations(); break;
+            case 18: daysInMonth(); break;
+            case 19: checkFuelType(); break;
+            case 20: beverageMenu(); break;
+            case 0: std::cout << "Exiting program. Goodbye!\n"; break;
+            default: std::cout << "Invalid choice. Please try again.\n";
+        }
+        std::cout << "\n";
+    } while (choice != 0);
+
+    return 0;
+}

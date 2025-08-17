@@ -1,0 +1,16 @@
+import java.util.Scanner;
+import java.util.InputMismatchException;
+class Problem6 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        double number = input.nextDouble();
+
+        // The number is either positive or it's not (negative or zero).
+        if (number >= 0) { // Considered positive if non-negative, or you can use `> 0` to exclude zero.
+            System.out.println("The number is positive.");
+        } else {
+            System.out.println("The number is negative.");
+        }
+    }
+}

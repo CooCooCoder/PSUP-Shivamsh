@@ -1,0 +1,6 @@
+def check_uppercase():
+    char = input("Enter a single character to check if it's uppercase: ")
+    if len(char) == 1 and 'A' <= char <= 'Z':
+        print(f"The character '{char}' is uppercase.")
+    else:
+        print(f"The character '{char}' is not a single uppercase letter.")

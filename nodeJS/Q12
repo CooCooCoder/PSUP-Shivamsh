@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+#include <limits> 
+void clearInputBuffer() {
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+}
+void classifyGrade() {
+    int marks;
+    std::cout << "\n--- Classify Grade ---\n";
+    std::cout << "Enter marks (0-100): ";
+    std::cin >> marks;
+    if (marks >= 90 && marks <= 100) {
+        std::cout << "Grade: A\n";
+    } else if (marks >= 75) {
+        std::cout << "Grade: B\n";
+    } else if (marks >= 50) {
+        std::cout << "Grade: C\n";
+    } else {
+        std::cout << "Grade: Fail\n";
+    }
+}

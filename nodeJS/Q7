@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+#include <limits> 
+void clearInputBuffer() {
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+}
+void checkVotingEligibility() {
+    int age;
+    std::cout << "\n--- Check Voting Eligibility ---\n";
+    std::cout << "Enter your age: ";
+    std::cin >> age;
+    if (age >= 18) {
+        std::cout << "You are eligible to vote.\n";
+    } else {
+        std::cout << "You are not eligible to vote.\n";
+    }
+}
